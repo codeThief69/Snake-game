@@ -45,25 +45,25 @@ window.requestAnimationFrame(main);
 
 window.addEventListener("keydown", (e) => {
   clearInterval(interval)
-  if ((e.code == "KeyW" && direction.dy !== 1) && ms > 5) {
+  if ((e.code == "KeyW" && direction.dy !== 1) && ms > fps) {
     direction = {
       dy: -1,
       dx: 0,
     };
 
-  } else if ((e.code == "KeyS" && direction.dy !== -1) && ms > 5) {
+  } else if ((e.code == "KeyS" && direction.dy !== -1) && ms > fps) {
     direction = {
       dy: 1,
       dx: 0,
     };
   }
 
-  if ((e.code == "KeyA" && direction.dx !== 1) && ms > 5) {
+  if ((e.code == "KeyA" && direction.dx !== 1) && ms > fps) {
     direction = {
       dy: 0,
       dx: -1,
     };
-  } else if ((e.code == "KeyD" && direction.dx !== -1) && ms > 5) {
+  } else if ((e.code == "KeyD" && direction.dx !== -1) && ms > fps) {
     direction = {
       dy: 0,
       dx: 1,
